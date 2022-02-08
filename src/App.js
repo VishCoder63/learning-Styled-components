@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { Table } from './components/Table';
+import { Trow } from './components/Trow';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table>
+        <thead>
+          <Trow cols={['Rank', 'Name', 'Points', 'Team']} />
+        </thead>
+        <tbody>          
+          <Trow cols={['1', 'Domenic', '88,110', 'dcode']} />
+          <Trow cols={['2', 'Sally', '72,400', 'Students']} />
+          <Trow cols={['3', 'Nick', '52,300', 'dcode']} />
+        </tbody>
+      </Table>
     </div>
   );
 }
